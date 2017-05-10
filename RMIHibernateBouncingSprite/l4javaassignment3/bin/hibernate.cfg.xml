@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">create</property>
+		
+		<!--Makes Hibernate generate the appropriate SQL for the chosen database.-->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!--The JDBC driver class-->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<property name="hibernate.connection.username">hibernate</property>
+
+		<property name="hibernate.connection.password">hibernate</property>
+
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/L4Assign3</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+		
+		<!--<property name="show_sql">true</property>-->
+
+	</session-factory>
+</hibernate-configuration>
